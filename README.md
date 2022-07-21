@@ -9,7 +9,7 @@ Welcome to Project Armadillo, a delightful audio player for Android.
 - [x] Encryption
 - [x] Analytics support
 - [x] Error Propagation
-- [x] Playback while the app is backgrounded
+- [x] Playback while the app is backgroundedd
 - [x] Immediate solution for playing track based / chapterized audio content
 - [x] Configurable foreground notifications for playback and downloading. Conforms to Oreo+ notification requirements.
 - [x] State object with regular updates for keeping the UI in sync
