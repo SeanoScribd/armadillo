@@ -85,10 +85,10 @@ publishing {
     publications {
         android.libraryVariants.all { variant ->
             "${variant.name.capitalize()}Aar"(MavenPublication) {
+                from(components[variant.name])
                 groupId project.PACKAGE_NAME
                 version project.LIBRARY_VERSION
                 artifactId project.getName().toLowerCase()
-                from components.findByName(variant.name.capitalize())
                 // Add sources to artifact
                 artifact androidSourcesJar
                 // Add javadocs
@@ -100,7 +100,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/$githubRepo")
+            url = uri("https://maven.pkg.github.com/SeanoScribd/armadillo")
             credentials {
                 username = "$githubUsername"
                 password = "$githubPassword"
